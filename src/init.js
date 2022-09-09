@@ -1,10 +1,11 @@
 import game from "./gameState";
-
-const TICK_RATE = 3000; // 3 seconds
+import initButtons from "./buttons";
+import { TICK_RATE } from "./constants";
 
 // Start the loop to call tick every 3 seconds
 async function init() {
   console.log("starting game");
+  initButtons(game.handleUserAction);
 
   let nextTimeToTick = Date.now();
   // Closure to encapsulate the state
