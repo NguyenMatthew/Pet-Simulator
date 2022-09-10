@@ -20,10 +20,9 @@ const gameState = {
   timeToStartCelebrating: -1,
   timeToEndCelebrating: -1,
   scene: 0,
+
   tick() {
     this.clock++;
-    console.log("clock", this.clock, this);
-
     if (this.clock === this.wakeTime) {
       this.wake();
     } else if (this.clock === this.sleepTime) {
@@ -39,7 +38,6 @@ const gameState = {
     } else if (this.clock === this.poopTime) {
       this.poop();
     }
-
     return this.clock;
   },
   startGame() {
@@ -92,7 +90,10 @@ const gameState = {
     modScene("dead");
     modFox("dead");
     this.clearTimes();
-    writeModal("Your pet has died: Press the middle button to restart");
+    writeModal(
+      `Your pet has died due to starvation or uncleanliness. 
+      <Br/> Press the middle button to restart!`
+    );
   },
   startCelebrating() {
     this.current = "CELEBRATING";
@@ -104,7 +105,6 @@ const gameState = {
     this.timeToEndCelebrating = -1;
     this.current = "IDLING";
     this.determineFoxState();
-    this.sleepTime = this.clock + DAY_LENGTH;
     togglePoopBag(false);
   },
   // Different fox image for idling

@@ -1,8 +1,8 @@
 export const ICONS = ["fish", "poop", "weather"];
 export const SCENES = ["day", "rain"];
 export const TICK_RATE = 3000; // 3 seconds
-export const RAIN_CHANCE = 0.4;
-export const DAY_LENGTH = 60;
+export const RAIN_CHANCE = 0.15;
+export const DAY_LENGTH = 30;
 export const NIGHT_LENGTH = 5;
 
 // Math.floor(Math.random() * 3) is a random number between 0 and 2
