@@ -9,3 +9,10 @@ export const modScene = function modScene(state) {
 export const togglePoopBag = function togglePoopBag(show) {
   document.querySelector(".poop-bag").classList.toggle("hidden", !show);
 };
+
+// Hides modal when there is no text
+export const writeModal = function writeModal(text = "") {
+  document.querySelector(
+    ".modal"
+  ).innerHTML = `<div class="modal-inner">${text}</div>`;
+};
