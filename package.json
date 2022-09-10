@@ -1,8 +1,7 @@
 {
-  "name": "fox-game",
+  "name": "pet-simulator",
   "version": "1.0.0",
   "description": "a digital pet game",
-  "main": "index.js",
   "scripts": {
     "build": "parcel build src/index.html",
     "dev": "parcel src/index.html",
@@ -23,8 +22,8 @@
     "prettier": "^2.7.1"
   },
   "browserslist": [
-    "last 1 Chrome version",
-    "last 1 Firefox version",
-    "last 1 Safari version"
+    "last 2 Chrome version",
+    "last 2 Firefox version",
+    "last 2 Safari version"
   ]
 }
