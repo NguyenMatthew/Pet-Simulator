@@ -91,7 +91,7 @@ const gameState = {
     modFox("dead");
     this.clearTimes();
     writeModal(
-      `Your pet has died due to starvation or uncleanliness. 
+      `Your pet has died from starvation or disease. 
       <Br/> Press the middle button to restart!`
     );
   },
